@@ -1,0 +1,125 @@
+old = {"rice":40,"sugar":20,"dal":60}
+new = {unit:price*5 for (unit,price) in old.items()}   #new file
+print(new)
+
+
+# conprehension using condition
+real = {"pavan":45,"sai":13,"satya":60}
+now = {name:age for (name,age) in real.items() if age >18}
+print(now)
+
+
+
+# comprehension using two lists
+l1 = ["sam","pavan","sai","prem"]
+l2 = [450,465,492,470,490]
+d = {name:(percent/(500))*100 for (name,percent) in zip(l1,l2)}
+print(d)
+
+#other logic
+
+l3 = list(map(str,input("enter names").split()))
+m = []
+for i in range(len(l3)):
+    user = int(input("enter marks"))
+    m.append(user)
+print(m)
+
+d1 = {n:(m/500)*100 for (n,m) in zip(l3,m)}
+print(d1)
+
+
+import random
+l = ["sam","pavan","satya","sai","ram","krish","prem","prince"]
+'''dis = random.randint(1,100)
+cust_dict = {names:dis for names in l}
+print(cust_dict) '''
+
+cust_dict = {names:random.randint(1,100) for names in l}
+print(cust_dict)
+
+new_dict = {names:random.randint(1,100)*0.5 for names in l}
+print(new_dict)
+
+
+#math module --> ceil, floor, sqrt, factorial, pow, fmod, divmod
+import math
+print("ceil of 10.3 is : ", math.ceil(10.3))
+print("floor of 10.3",math.floor(10.3))
+print("square root of 9 :",math.sqrt(9))
+print("factorial of 3",math.factorial(3))
+print("power of 2,3",math.pow(2,3))
+print("remainder of 10 and 3 : ",math.fmod(10,3))
+
+#gives both quotient and remainder
+a,b = divmod(10,3)
+print(a,b)
+
+#other
+#immutable --> unchange --> int, float , bool, tuple
+x= 20
+print(x)
+print(id(x))
+x=30       # both x are different variable memory location
+print(x)  # varible is not overwritten
+print(id(x))
+
+#mutable ---> change --> list, set, dictionary
+l =[1,2,3,4]
+print(id(l))
+print(l.append(30))
+print(l)
+print(id(l)) #both list variable memory location is same
+
+
+#other
+# comprehension using two lists
+l1 = ["sam","pavan","sai","prem"]
+l2 = [450,465,492,470,490]
+d = {name:(percent/(500))*100 for (name,percent) in zip(l1,l2)}
+print(d)
+
+#other
+str = "Hi  i\'m fine"
+print(str)
+
+#operation---> concatenation(+), repetition(*)
+ #functions
+
+print(max("a","b","c"))  # ascil value
+ #find()--> gives index
+
+#operations
+s1 = "pavan"
+s2 = "prince"
+s3 = "     ra mreingjh       "
+print(s1+s2)
+print(s1*4)
+
+#functions ---> upper(),lower(), capitalize , replace, split, center,
+
+print(s1.upper())
+print(s1.lower())
+print(s1.capitalize())
+print(s1.replace("a","h"))
+print(s3.split())  # remove spaces in front and back, in between spaces are neglected
+print(s1.center(30,'*'))  #allocte 30 space --> put string in center -->put * spaces
+
+#remaining functons  --> count, endswith, find, index, 
+print(s1.count("a"))
+print(s1.endswith("n"))  # check string endswith
+print(s1.find("v"))   #gives index
+print(s1.index("n"))  #gives index
+
+
+
+
+
+
+
+
+
+
+
+
+

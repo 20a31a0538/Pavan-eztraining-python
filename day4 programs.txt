@@ -1,0 +1,49 @@
+'''str = input("enter the string")
+c = input("enter the charcter")
+if c in str:
+    print("present")
+else:
+    print("not present") '''
+
+
+#other logic
+st = input("enter string")
+ch = input("enter character")
+a = "yes" if st in ch else "no"  # ---> low space and time complexity
+print(a)
+
+
+#other program
+s= input("enter string")
+count =0
+for i in range(len(s)):
+    if s[i] ==" ":
+        count+=1
+print(count)
+
+#other program
+s= input("enter a string")
+i=0
+n = len(s)-1
+while i<=n:
+    if s[i]!=s[n]:
+        print("not a palindrome")
+        break
+    else:
+        i+=1
+        n-=1
+print("palindrome")
+
+#other programs
+s = input("enter a string")
+l=["a","e","i","o","u","A","E","I","O","U"]
+count=0
+for i in range(len(s)):
+    for j in range(len(l)):
+        if s[i]==l[j]:
+            count+=1
+            print("vowel is ",l[j])
+
+print(count)
+
+
