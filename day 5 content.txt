@@ -1,0 +1,226 @@
+import calendar
+print("full calendar")
+print(calendar.calendar(2022))
+
+print("particular month")
+print(calendar.month(2023,2))
+'''
+print("set firat day of the week")
+calendar.firstweekday(calendar.FRIDAY)
+print(calendar.month(2023,2))'''
+
+
+#other concept
+import datetime
+a= datetime.datetime.now()  #print exact time &date
+print(a)
+
+new_ver = a.strftime("Y") #Y is uppercase
+short_ver = a.strftime("y") #y is lowercase
+print(new_ver)
+print(short_ver)
+
+#other concept
+#without arg - with return
+def factors(n1):
+    for i in range(1,n1+1):
+        if n1%i==0:
+            print("factor is",i)
+        
+
+
+n= int(input("enter number"))
+factors(n)
+
+#other concept
+#functions --> classification : 1. predefined, userdefined
+#for code reusability , we use function,
+#instead of writing same code , multiple times, we can write it once include that include that inside the funtion and call the function whereever we neec it.
+#TYPES:
+#1. without arg  -  without return value
+#2. without arg  -  with return value
+#3. with arg -  with retrun
+#4. with arg -  without reurn vaslue
+
+#other concept
+#with arg - without return
+def table(n1):
+    for i in range(1,11):
+        print(n,"X",i,"=",n*i)
+
+
+
+
+
+
+
+n = int(input("enter a num: "))
+table(n)
+
+
+
+
+'''n = int(input("enter a num: "))
+last = int(input("enter upto number: "))
+for i in range(1,last+1):
+    res=n*i
+    print(n,"X",i,"=",res)'''
+
+#other concept
+#random moudle ---> sample(), shuffle(), choice(), random
+import random as r
+a= "I loves sweets"
+print(r.sample(a,2))  #randomly takes 2 character from a variable
+
+#shuffle
+l = [1,2,3,4,5]
+print(r.shuffle(l))
+print(l)  # list is shuffled
+
+#choice
+print(r.choice(l))
+
+#choices
+print(r.choices(a,k=3))  #gives any random character
+print(r.choices(l,k=10)) #going to print 10 values(includes duplicates)
+
+#random
+print(r.random())   # gives random number between 0.0 to 1.0 (exclude)
+
+#uniform
+print(r.uniform(5,10))   #return random float number
+
+#dir()
+i = dir(r)  # r-->module name & #displays all functions
+print(i)
+
+
+#other concept
+#with arg - with return
+def digits(n):
+    sum=0
+    while n!=0:
+        rem = n%10
+        n=n//10
+        sum = sum+rem
+    return sum
+
+
+n = int(input("enter a number: "))
+res = digits(n)
+print(res)
+
+#other concept
+#with arg - without return
+def multi(n1,n2,n3):
+    prod = n1*n2*n3
+    print(prod)
+
+print("main function")
+multi(3,4,5)
+
+
+
+'''#user input
+print("main function")
+n1,n2,n3=list(map(int,input("enter numbers").split()))
+multi(ni,n2,n3)'''
+
+#other concept
+def multi():
+    n1,n2,n3 = list(map(int,input(" enter numbers").split()))
+    prod = n1*n2*n3
+    return prod
+
+print("main function")
+receive = multi()                   # we need to receive return value so store in variable
+print(receive)
+
+#other concept
+def multi():
+    n1,n2,n3 = list(map(int,input(" enter numbers").split()))
+    prod = n1*n2*n3
+    return prod
+
+print("main function")
+receive = multi()                   # we need to receive return value so store in variable
+print(receive)
+
+#other concept
+#with arg - without return
+def multi(n1,n2,n3):
+    prod = n1*n2*n3
+    print(prod)
+
+print("main function")
+multi(3,4,5)
+
+
+
+'''#user input
+print("main function")
+n1,n2,n3=list(map(int,input("enter numbers").split()))
+multi(ni,n2,n3)'''
+
+#other concept
+#with arg - without return
+def multi(n1,n2,n3):
+    prod = n1*n2*n3
+    print(prod)
+
+print("main function")
+multi(3,4,5)
+
+
+
+'''#user input
+print("main function")
+n1,n2,n3=list(map(int,input("enter numbers").split()))
+multi(ni,n2,n3)'''
+
+#other concept
+def multi():
+    n1,n2,n3 = list(map(int,input(" enter numbers").split()))
+    prod = n1*n2*n3
+    return prod
+
+print("main function")
+receive = multi()                   # we need to receive return value so store in variable
+print(receive)
+
+#other concept
+def multi():
+    n1,n2,n3 = list(map(int,input(" enter numbers").split()))
+    prod = n1*n2*n3
+    print(prod)
+
+print("main function")
+multi()
+
+#other concept
+def multi():
+    n1,n2,n3 = list(map(int,input(" enter numbers").split()))
+    prod = n1*n2*n3
+    print(prod)
+
+print("main function")
+multi()
+
+#other concept
+#without - without arg
+
+def sample():                  #fun definition
+    print("great day")
+    print("happy time")
+
+
+print("main function")
+sample()              #fun calling
+print("inside main")
+sample()
+
+
+
+
+
+
