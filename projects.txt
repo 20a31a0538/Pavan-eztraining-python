@@ -1,0 +1,106 @@
+q1 = """1.  who is the father of our Nation
+A.Subhas Chandhra Bose
+B.Mohan Das Karam Chandh Gandhi
+C.Nehru
+D.Abdul Kalam
+"""
+q2 = """2.who is the first prime Minister od India ?
+A.Indhra Gandhi
+B.Gandhi
+C.Nehru
+D.Modi"""
+
+q3 = """3.what is our National song ?
+A.Jana Gana Mana
+B.Open Gadham Style
+C.VandheMataram
+D.O sita"""
+
+q4 = """4.What is your faviourate Food Item in the following ?
+A.Biryani
+B.Roti
+C.Rice
+D.Chapathi"""
+
+q5 ="""5.Who won the world cricket cup in 2011 ?
+A. Austria
+B. South America
+C. SriLanka
+D. India"""
+
+questions = {q1:"B",q2:"C",q3:"C",q4:"A",q5:"D"}
+
+name = input("enter your name")
+
+print("Hi", name ,"Welcome to this Quiz !!!")
+score=0
+
+for i in questions:
+    print()
+    print(i)
+    flag = input("Do you want to skip this question(Yes/no) : ")
+    if flag=="yes":
+        continue
+    ans = input("enter your answer : ")
+    if ans == questions[i]:
+        print("Wow! Your answer is correct")
+        score=score + 1
+        print("your current score is : ",score)
+    else:
+        print("Ooops ! Your answer is Wrong : you lost one mark")
+        score=score-1
+        print("your current score is : ",score)
+    #quiting
+    flag2 = input("Do you want to quit the Game (Yes/No): ")
+    if flag2 == "yes":
+        break
+print("Your total score is : ",score)
+    
+
+#other
+import time
+def clock(t):
+
+    while t:
+        mins,secs = divmod(t,60)  #quotient --> minutes , reminder --> seconds
+        timer = "{:02d}:{:02d}".format(mins,secs)
+        print(timer)
+        time.sleep(1)  #wait for 1 second for decrement
+        t= t-1
+
+
+t = int(input("enter time in seconds: "))
+clock(t)
+
+#other
+boy=input("Enter boy name: ").lower()
+girl=input("Enter girl name:").lower()
+boy=boy.replace(" ","")
+girl=girl.replace(" ","")
+print(boy)
+print(girl)
+
+for i in boy:
+    for j in girl:
+        if i==j:
+            boy=boy.replace(i," ",1)
+            girl=girl.replace(j," ",1)
+            break
+count=len(boy+girl)
+print(count)
+if count>0:
+    list1=["FRIENDS","LOVERS","AFFECTIONATE","MARRIAGE","ENEMIES","SIBLINGS"]
+    while len(list1)>1:
+              c=count%len(list1)
+              s_index=c-1
+              
+              if s_index>=0:
+                 left=list1[:s_index]
+                 right=list1[s_index+1:]
+                 list1=right+left
+              else:
+                  list1=list1[:len(list1)-1]
+    print("Relationship: ",list1[0])
+else:
+    print("Enter different names" )
+              

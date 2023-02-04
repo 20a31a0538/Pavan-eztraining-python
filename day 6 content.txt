@@ -1,0 +1,116 @@
+class computer():
+    a= 10
+    b=20
+    print("class variable",a)
+    def other_var(self):
+        c=30
+        print("method variable",c)
+        #accessing class variable "a"
+        print("access class varible a= ",self.a) #class variable is access by mehtod using self
+
+
+
+
+lenova =computer() #object 1
+print("object 1 is access class variable globally",lenova.a)
+print("addition of global variable",lenova.a + lenova.b)
+
+dell = computer()  #object 2
+print("object 2 is access class variable globally",dell.a)
+
+# print(dell.c)  ---> error method variable can not be accessed
+dell.other_var() 
+
+#other concept
+class Employee():
+    def __init__(self, name ,id_card):   #constructor --->automatically object called
+        self.name = name
+        self.id_card = id_card
+        
+    def display(self):
+        print(self.name,self.id_card)
+
+
+emp1 = Employee("john",101)
+emp2 = Employee("david",102)
+emp1.display()
+emp2.display()
+
+#other concept
+class pavan():                 #class creation
+    def behaviour(self):  # function or method
+        print("yes")
+
+obj_name = pavan()  #creaating object
+obj_name.behaviour()  # accesing behaviour of class 
+
+obj2 = pavan()
+obj2.behaviour()
+
+#other concept
+#user does not want interption or program flow not to be collide
+# to achieve this , we use exception handling
+a=100
+b=10
+#exception handling --> can not disturb my program flow
+try:
+    print(a/b)
+except Exception as e:
+    print("b can not be zero",e)
+
+print("flow canot be interupted by error")
+print("my statements are printed")
+print("bye")
+
+#other concept
+a=100
+b=0
+#exception handling --> can not disturb my program flow
+try:
+    print(a/b)
+#except Exception as e:
+#print("b can not be zero",e)
+
+#finally --> even ther is error , finally must executed
+finally:
+    print("finally must be executed")
+    
+
+#other concept
+a= 10
+try:
+    b=int(input("enter b value"))
+    print("resources are opened")
+    print(a/b)
+except ZeroDivisionError as e:
+    print("b can not be zero")  # same as you entered amount excced it's limit
+except ValueError as e:
+    print("type of input must be integer ")
+except Exception as e:
+    print("it is other error")
+
+finally:
+    print("resources are closed")
+
+#other concept
+# it is an efficient concept , used in all object oriented lang like java , python.#
+#reasons:
+#1. code reusability , data security , hiding data
+#class:
+# it is a blue print , --> birds, laptop
+#object:
+#it is a thing , created based on class
+#note:
+# one class can have multiple objects
+#example:
+# bird-->class , object --> parrot & laptop--> class, object---> dell, lenovo
+
+#other concept
+
+a = 101
+# not to allow to enter odd number
+if a%2!=0:
+    raise Exception ("you are not allow to enter odd number")
+else:
+    print("you are correct ... proced further")
+
